@@ -6,7 +6,8 @@ public:
         int ans = -1;
         for(int i = 0;i < nums.size(); i++){
             window += nums[i];
-            while(i - left +1 != window){
+            while(i - left +1 != window){ 
+                // i - left +1. this line clarifies that if in the window available number of element is equal to its length or not..
                 window -= nums[left];
                 left++;
             }
