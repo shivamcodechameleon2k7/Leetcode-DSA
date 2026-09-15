@@ -10,65 +10,42 @@
  */
 class Solution {
 public:
-
-    ListNode* merge(ListNode* left, ListNode* right) {
-
-        ListNode* dummy = new ListNode(0);
-        ListNode* temp = dummy;
-
-        while (left != nullptr && right != nullptr) {
-
-            if (left->val <= right->val) {
-                temp->next = left;
-                left = left->next;
-            }
-            else {
-                temp->next = right;
-                right = right->next;
-            }
-
-            temp = temp->next;
-        }
-
-        // Remaining nodes
-        if (left != nullptr) {
-            temp->next = left;
-        }
-        else {
-            temp->next = right;
-        }
-
-        return dummy->next;
-    }
-
-
     ListNode* sortList(ListNode* head) {
-
-        // Base case
-        if (head == nullptr || head->next == nullptr) {
+        if(head == nullptr || head->next == nullptr){
             return head;
         }
-
-        // Find middle
         ListNode* slow = head;
         ListNode* fast = head;
         ListNode* prev = nullptr;
-
-        while (fast != nullptr && fast->next != nullptr) {
+        while(fast != nullptr && fast->next != nullptr){
             prev = slow;
             slow = slow->next;
             fast = fast->next->next;
         }
-
-        // Break into two lists
         prev->next = nullptr;
-
-        // Sort left and right
         ListNode* left = sortList(head);
         ListNode* right = sortList(slow);
-
-        // Merge
-        return merge(left, right);
+         ListNode* dummy = new ListNode(0);
+        ListNode* temp = dummy;
+        ListNode* p1 = left;
+        ListNode* p2 = right;
+        while(p1 != nullptr && p2 != nullptr){
+            if(p1->val <= p2->val){
+                temp->next = p1;
+                p1 = p1->next;
+            }
+            else{
+                temp->next = p2;
+                p2 = p2->next;
+            }
+            temp = temp->next;
+        }
+        if(p1 != nullptr){
+            temp->next = p1;
+        }
+        else{
+            temp->next = p2;
+        }
+        return dummy->next;
     }
 };
-        
