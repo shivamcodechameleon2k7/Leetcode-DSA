@@ -4,6 +4,7 @@ public:
         int low = 0;
         int high = nums.size()-1;
         while(low < high){
+            // because we are not searching for an exact target. We are narrowing the range until only one element remains.Stop when only one candidate remains.
             int mid = low + (high-low)/2;
             if(nums[mid] > nums[high]){
                 low = mid+1;
