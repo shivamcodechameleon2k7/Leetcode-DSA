@@ -1,7 +1,6 @@
 class Solution {
 public:
     string addStrings(string num1, string num2) {
-
         //addition happens from right to left
         int i = num1.length()-1;
         int j = num2.length()-1;
@@ -25,14 +24,11 @@ public:
                 digit2 = 0;
             }
             int sum = digit1 + digit2 + carry;
-
-            //They separate the sum into two parts: the digit you put in the current position and the carry you take to the next position.
+//They separate the sum into two parts: the digit you put in the current position and the carry you take to the next position.
             carry = sum / 10;
             int digit = sum % 10;
-
             //integer-to-character conversion
             res += digit + '0';
-
             //addition happens from right to left
             i--;
             j--;  
