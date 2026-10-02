@@ -118,7 +118,7 @@ public:
 // Return the final string
 
 // return ans;
-// 🧠 Main idea to remember
+//  Main idea to remember
 
 // String digits → multiply → add existing value → separate digit & carry → store in result array → convert array to string.
 
