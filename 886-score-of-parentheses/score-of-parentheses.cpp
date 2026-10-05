@@ -35,4 +35,4 @@ public:
         // Final score of the complete string
         return st.top();
     }
-};;
+};
