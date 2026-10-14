@@ -26,7 +26,7 @@ public:
 
 
 
-/*final logic is working correctly:
+/*final logic is :
 while condition handles remaining digits and carry.
 sum = carry includes the previous carry.
 Both if statements safely handle strings of different lengths.
