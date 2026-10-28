@@ -10,7 +10,7 @@ public:
         for(char ch : s){
 
 
-            // open parenthesis present -> one more level inside.
+            // open parenthesis present -> one more level of nesting depth.
             if(ch == '('){
                 depth++;
 
@@ -18,7 +18,7 @@ public:
                 ans = max(ans,depth);
             }
 
-            // closed parenthesis present-> leaving the current level of closing.
+            // closed parenthesis present-> leaving the current level of closing depth.
             else if(ch == ')'){ 
                 depth--;
             }
