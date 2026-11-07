@@ -24,3 +24,7 @@ public:
         return searchBST(root->right,val);
     }
 };
+
+/*root = pointer to the current node.
+root->val = value stored in the current node.
+val = value you are searching for.*/
