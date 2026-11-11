@@ -21,3 +21,8 @@ public:
         return min({option1, option2, option3});
     }
 };
+
+
+/*min(need1, need2) → Common quantity.
+max(need1, need2) → Maximum quantity required.
+1LL → Prevents integer overflow during multiplication.*/
