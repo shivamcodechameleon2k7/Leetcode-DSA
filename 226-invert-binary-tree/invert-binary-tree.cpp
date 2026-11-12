@@ -16,12 +16,12 @@ public:
             return NULL;
         }
         // using swap function ;
-        // swap(root->left,root->right);
+        swap(root->left,root->right);
 
         // using swap through a temp variable;
-        TreeNode* temp = root->left;
-        root->left = root->right;
-        root->right = temp;
+        // TreeNode* temp = root->left;
+        // root->left = root->right;
+        // root->right = temp;
 
 
         invertTree(root->left);
