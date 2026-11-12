@@ -24,3 +24,8 @@ public:
     }
 };
 
+/*Check if the node is NULL.
+Swap its left and right children.
+Recursively invert the left subtree.
+Recursively invert the right subtree.
+Return the root.*/
