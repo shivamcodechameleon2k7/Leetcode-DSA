@@ -15,7 +15,14 @@ public:
         if(root == NULL){
             return NULL;
         }
-        swap(root->left,root->right);
+        // using swap function ;
+        // swap(root->left,root->right);
+
+        // using swap through a temp variable;
+        TreeNode* temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+
 
         invertTree(root->left);
         invertTree(root->right);
