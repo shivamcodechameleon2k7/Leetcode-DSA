@@ -12,7 +12,7 @@
 class Solution {
 public:
     int count = 0;
-    int ans = 0;
+    int ans = 108777;
 
     void inorder(TreeNode* root, int k) {
         if (root == NULL) {
