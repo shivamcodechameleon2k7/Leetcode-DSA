@@ -10,3 +10,13 @@ public:
         return minm;
     }
 };
+
+/*
+Code	        Core reason
+int ans = 0;	Start counting changes from zero.
+i += 2	        Process independent pairs.
+s[i] != s[i+1]	Identify pairs that are not beautiful.
+ans++	        One character change fixes that pair.
+return ans	    Return the minimum total changes.
+
+*/
