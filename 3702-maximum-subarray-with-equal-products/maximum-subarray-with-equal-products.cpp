@@ -33,3 +33,27 @@ public:
         return ans;
     }
 };
+
+/*subarray is valid when:
+
+Product = GCD \times LCM
+
+
+We need to return the maximum length of such a subarray.
+2. Approach – Brute Force
+1. Use i to select the starting index.
+2. Use j to extend the subarray.
+3. Maintain three variables:
+   - product = multiplication of elements.
+   - gcdVal = GCD of elements.
+   - lcmVal = LCM of elements.
+4. Check whether:
+
+product = gcdVal \times lcmVal
+
+
+5. If true, update:
+
+ans = max(ans, j - i + 1)
+
+6. Return ans.*/
