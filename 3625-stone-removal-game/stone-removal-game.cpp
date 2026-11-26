@@ -12,6 +12,7 @@ public:
         }
 
         return turn % 2 != 0;
+        return turn % 2 == 1;
     }
 };
 
